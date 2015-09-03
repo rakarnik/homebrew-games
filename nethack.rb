@@ -67,11 +67,10 @@ class Nethack < Formula
       system "make"
     end
 
-	# Make utilities
-	cd "util" do
-      system "make recover"
+    # Make utilities
+    cd "util" do
+      system "make", "recover"
     end
-
 
     bin.install "src/nethack"
 	bin.install "util/recover"
