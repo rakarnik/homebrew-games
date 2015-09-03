@@ -67,7 +67,14 @@ class Nethack < Formula
       system "make"
     end
 
+	# Make utilities
+	cd "util" do
+      system "make recover"
+    end
+
+
     bin.install "src/nethack"
+	bin.install "util/recover"
     (libexec+"save").mkpath
 
     # These need to be group-writable in multi-user situations
